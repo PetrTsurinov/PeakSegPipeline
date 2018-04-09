@@ -230,12 +230,12 @@ plot_all <- function
   for(out.path in out.path.vec){
     sample.peaks <- joint.peaks.dt[out.path]
     out.file <- file.path(set.dir, "samples", out.path, "joint_peaks.bedGraph")
-    fwrite(
-      sample.peaks[, .(chrom, peakStart, peakEnd, mean.str)],
-      out.file,
-      sep="\t",
-      col.names=FALSE,
-      quote=FALSE)
+    #fwrite(
+    #  sample.peaks[, .(chrom, peakStart, peakEnd, mean.str)],
+    #  out.file,
+    #  sep="\t",
+    #  col.names=FALSE,
+    #  quote=FALSE)
   }
   specific.html.list <- list()
   for(sg in sample.group.totals$sample.group){
